@@ -1,0 +1,47 @@
+.item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+.first{
+    width: 10%;
+    padding: 0.5rem;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.second{
+    width: 60%;
+    padding: 0.5rem;
+    display: block;
+    align-items:center;
+}
+.third{
+    width: 30%;
+    padding: 0.5rem;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.buttonItem{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: orange;
+}
+
+.image{
+    width: 2rem;
+    height: 2rem;
+}
+.detail{
+    font-size: small;
+}
+.recieve{
+    color: green;
+}
+.pay{
+    color: red;
+}

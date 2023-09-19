@@ -1,0 +1,44 @@
+.form{
+    word-break: break-all;
+    width: 70vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 1rem;
+    border-radius: 0.2rem;
+    background-color: rgb(245, 223, 183);
+    padding: 1rem;
+}
+
+.header{
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    column-gap: 8rem;
+}
+
+.formInput{
+    width: 10rem;
+    height: 2rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: white;
+    padding-left: 1rem;
+}
+
+#friendInput{
+    background-color: lightgray;
+}
+
+.buttonInput{
+    background-color: orange;
+    border-radius: 1rem;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+}

@@ -1,0 +1,20 @@
+.add{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.inputAdd{
+    border: none;
+    height: 2rem;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0rem 1rem 0rem;
+}
+.addButton{
+    border: none;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 8rem;
+    background-color: orange;
+}

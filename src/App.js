@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import List from "./components/List";
+import Form from "./components/Form";
 
-function App() {
+export default function App(){
+  const [data, setData] = useState([
+    {
+      id: 1,
+      name : "Clark",
+      needToPay : 10,
+    },
+    {
+      id: 2,
+      name : "Sarah",
+      needToPay : -10,
+    },
+    {
+      id:3,
+      name : "Anthony",
+      needToPay: 0,
+    },
+  ]);
+  const [isOpen, setIsOpen] = useState(null);
+
+  const singleData = data.filter((value) => {
+    return value.id === isOpen;
+  })[0];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <List data={data} setData={setData} isOpen={isOpen} setIsOpen={setIsOpen} />
+      {
+        singleData !== undefined ? (<Form singleData={singleData} setFunction={setData} users={data} />) : null
+      }
     </div>
-  );
+  )
 }
-
-export default App;
