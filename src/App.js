@@ -31,7 +31,7 @@ export default function App(){
     <div className="app">
       <List data={data} setData={setData} isOpen={isOpen} setIsOpen={setIsOpen} />
       {
-        singleData !== undefined ? (<Form singleData={singleData} setFunction={setData} users={data} />) : null
+        singleData !== undefined ? (<Form singleData={singleData} setFunction={setData} users={data} setIsOpen={setIsOpen} />) : null
       }
     </div>
   )

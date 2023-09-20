@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-export default function Form({ singleData, setFunction, users }){
+export default function Form({ singleData, setFunction, users, setIsOpen }){
 
     const [data, setData] = useState({
         billValue : 0,
@@ -10,6 +10,10 @@ export default function Form({ singleData, setFunction, users }){
     });
 
     function handleOnClick(){
+        if(data.yourExpense > data.billValue){
+            alert("Your expense cannot be greater than the value");
+            return;
+        }
         let newArray = users.filter((value) => {
             return value.id !== singleData.id;
         })
@@ -26,6 +30,7 @@ export default function Form({ singleData, setFunction, users }){
         setFunction(() => {
             return [...newArray, answer];
         })
+        setIsOpen(null);
     }
 
 
